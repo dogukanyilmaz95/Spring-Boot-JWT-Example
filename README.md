@@ -12,6 +12,9 @@
 ```
 
 ## 2. Create Mysql database
+```
+docker pull mysql
+```
 
 ### create database testdb
 ## 3. Change mysql username and password as per your installation
