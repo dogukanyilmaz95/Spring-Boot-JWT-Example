@@ -40,11 +40,10 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
-        JSONObject jsonObject;
         try {
-            String marshalledXml = org.apache.commons.io.IOUtils.toString(request.getInputStream());
+            String requestData = request.getReader().lines().collect(Collectors.joining());
 
-            jsonObject = new JSONObject(marshalledXml);
+            JSONObject jsonObject = new JSONObject(requestData);
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                     jsonObject.get("username"),
                     jsonObject.get("password"),
