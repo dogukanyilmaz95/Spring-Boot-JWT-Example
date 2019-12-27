@@ -8,10 +8,13 @@
 # Steps to Setup
 ## 1. Clone the application
 ```
- git clone https://github.com/dogukanyilmaz95/Spring-boot-example.git
+ git clone https://github.com/dogukanyilmaz95/Spring-Boot-JWT-Example
 ```
 
 ## 2. Create Mysql database
+```
+docker pull mysql
+```
 
 ### create database testdb
 ## 3. Change mysql username and password as per your installation
