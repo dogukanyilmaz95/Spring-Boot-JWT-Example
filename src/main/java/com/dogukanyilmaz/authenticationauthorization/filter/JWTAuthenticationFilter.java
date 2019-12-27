@@ -26,9 +26,6 @@ import java.util.stream.Collectors;
  */
 public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
 
-    private AuthenticationManager authenticationManager;
-
-
     static final String TOKEN_PREFIX = "Bearer ";
     static final String HEADER_STRING = "Authorization";
 
